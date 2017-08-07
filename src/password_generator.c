@@ -129,6 +129,7 @@ char* generate_password(size_t bound)
     uint32_t index_l = pcg32_boundedrand(lengths[index_t]); 
     password[i] = table[index_t][index_l];
   }
+  password[bound] = '\0';
   return password;
 }
 
